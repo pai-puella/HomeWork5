@@ -45,6 +45,26 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным");
         }
-    }
 
+        System.out.println();
+        System.out.println("Задача 4");
+        int deliveryDistance = 95;
+        int deliveryTime;
+
+        if (deliveryDistance <= 20) {
+            deliveryTime = 1;
+        } else if (deliveryDistance <= 60) {
+            deliveryTime = 2;
+        } else if (deliveryDistance <= 100) {
+            deliveryTime = 3;
+        } else {
+            deliveryTime = -1; // Если расстояние больше 100 км, доставки нет
+        }
+
+        if (deliveryTime != -1) {
+            System.out.println("Потребуется дней: " + deliveryTime);
+        } else {
+            System.out.println("Доставки нет");
+        }
+    }
 }
