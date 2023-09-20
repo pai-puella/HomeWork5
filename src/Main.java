@@ -66,5 +66,46 @@ public class Main {
         } else {
             System.out.println("Доставки нет");
         }
+
+        System.out.println();
+        System.out.println("Задача 5");
+        int monthNumber = 12;
+
+        // Проверяем, что номер месяца не больше 12
+        if (monthNumber > 12) {
+            System.out.println("Некорректный номер месяца");
+            return;
+        }
+
+        String season;
+
+        // Определяем сезон по номеру месяца
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                season = "Зима";
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = "Весна";
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = "Лето";
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = "Осень";
+                break;
+            default:
+                season = "Некорректный номер месяца";
+                break;
+        }
+
+        System.out.println("Месяц " + monthNumber + " принадлежит к сезону " + season);
     }
 }
